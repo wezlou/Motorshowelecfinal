@@ -1,0 +1,210 @@
+/* Import font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg: #0f1115;
+  --card-bg: #1a1d24;
+  --primary: #ff3c00;
+  --primary-hover: #e03400;
+  --text: #ffffff;
+  --muted-text: #c1c1c1;
+  --border: #2a2d34;
+  --comment-bg: #1f232b;
+  --radius: 12px;
+  --image-height: 300px; /* Set a height for images */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--primary);
+  text-shadow: 0 2px 4px rgba(255, 60, 0, 0.3);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+  border-left: 4px solid var(--primary);
+  padding-left: 0.75rem;
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 250px;
+}
+
+.card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 10px 28px rgba(255, 60, 0, 0.15);
+}
+
+.card-content {
+  padding: 1.2rem;
+}
+
+.image-container {
+  width: 100%;
+  height: var(--image-height);
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comment-box {
+  background-color: var(--comment-bg);
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  border: 1px solid var(--border);
+}
+
+.input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  background-color: #111318;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(255, 60, 0, 0.3);
+}
+
+.button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 60, 0, 0.4);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-image {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: var(--radius);
+  object-fit: contain;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-label {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f17b27;
+    margin-top: 10px;
+  }
+  
+/* Comments Modal */
+.comments-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .comments-modal-content {
+    background: white;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  
+  .comment-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .view-comments-button {
+    margin-top: 10px;
+    display: block;
+  }
+  
