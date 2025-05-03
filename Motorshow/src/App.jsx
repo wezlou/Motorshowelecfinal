@@ -7,9 +7,9 @@ function Header() {
       <nav className="nav">
         <div className="nav-left">
           <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/motorshow">Motorshow</a></li>
-            <li><a href="/about-us">About Us</a></li>
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#motorshow-gallery">Motorshow</a></li>
+            <li><a href="#about-us">About Us</a></li>
           </ul>
         </div>
         <div className="auth-buttons">
@@ -157,7 +157,12 @@ export default function MotorshowApp() {
   return (
     <>
       <Header />
-      <div className="container">
+
+      <div className="home-section" id="home-section">
+          <h1>Welcome to Motorshow Concept Website</h1>
+          <p><u>Explore various motorbike concepts, view parts suggestions, and share your thoughts by commenting on your favorites.</u></p>
+      </div>
+      <div className="container" id="motorshow-gallery">
         <h1 className="title">Motorshow Gallery</h1>
         {sections.map((section) => (
           <div key={section.key} className="section">
@@ -193,11 +198,11 @@ export default function MotorshowApp() {
                     </div>
                   </CardContent>
                 </Card>
+                
               ))}
             </div>
-          </div>
+          </div>  
         ))}
-
         {/* Modal for suggested parts */}
         {showSuggestedParts && (
           <div className="suggested-parts-modal">
@@ -240,6 +245,13 @@ export default function MotorshowApp() {
             </div>
           </div>
         )}
+      </div>
+      <div className="about-us-section" id="about-us">
+        <h1>About Us</h1>
+        <p>
+          Welcome to the Motorshow Concept website! We are a passionate group of motorbike enthusiasts 
+          dedicated to showcasing the best motorbike concepts and suggested parts.
+        </p>
       </div>
     </>
   );

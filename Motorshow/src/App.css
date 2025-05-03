@@ -306,3 +306,57 @@ body {
   border: none;
   border-radius: 4px;
 }
+
+.home-section {
+  padding: 2rem;
+  text-align: center;
+  background-image: url('/images/for-background.jpg'); /* Adjust path as needed */
+  background-size: cover;       /* Scale image to cover the container */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  color: white;                 /* Text contrast */
+  min-height: 300px;            /* Optional: force height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-section h1 {
+  font-style: italic;
+  font-size: 5.5rem;
+  margin-bottom: 1rem;
+  color: #eeb8a9;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.home-section p {
+  font-size: 2.2rem;
+  font-style: italic;
+  color: #e03400;
+}
+
+.about-us-section {
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+  margin-top: 50px; /* Adds space above */
+  margin-bottom: 50px; /* Adds space below */
+}
+
+.about-us-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-us-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
