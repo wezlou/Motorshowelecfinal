@@ -9,7 +9,6 @@ function Header() {
           <ul className="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/motorshow">Motorshow</a></li>
-            <li><a href="/motorshow-gallery">Gallery</a></li>
             <li><a href="/about-us">About Us</a></li>
           </ul>
         </div>
