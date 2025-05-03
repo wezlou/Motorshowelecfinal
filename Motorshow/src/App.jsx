@@ -192,7 +192,7 @@ export default function MotorshowApp() {
                         onChange={(e) => handleCommentChange(image.src, e.target.value)}
                       />
                       <Button onClick={() => submitComment(image.src)}>Submit</Button>
-                      <Button onClick={() => openCommentsModal(image.label)} className="view-comments-button">
+                      <Button onClick={() => openCommentsModal(image.src)} className="view-comments-button">
                         View Comments
                       </Button>
                     </div>
