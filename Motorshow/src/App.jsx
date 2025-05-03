@@ -58,32 +58,32 @@ const sections = [
 
 const sampleImages = {
   thai: [
-    { src: '/images/thai1.jpg', label: 'Thai Concept - Raider 150 FI 1' },
-    { src: '/images/thai2.jpg', label: 'Thai Concept - Raider 150 FI 2' },
-    { src: '/images/thai3.jpg', label: 'Thai Concept - Raider 150 FI 3' },
-    { src: '/images/thai4.jpg', label: 'Thai Concept - Raider 150 FI 4' },
-    { src: '/images/thai5.jpg', label: 'Thai Concept - Raider 150 FI 5' },
+    { src: '/images/thai1.jpg', label: 'Raider 150 FI' },
+    { src: '/images/thai2.jpg', label: 'Sniper 150' },
+    { src: '/images/thai3.jpg', label: 'Click 125' },
+    { src: '/images/thai4.jpg', label: 'Wave 125' },
+    { src: '/images/thai5.jpg', label: 'Smash' },
   ],
   malaysian: [
-    { src: '/images/malaysian1.jpg', label: 'Malaysian Concept - Raider 150 FI 1' },
-    { src: '/images/malaysian2.jpg', label: 'Malaysian Concept - Raider 150 FI 2' },
-    { src: '/images/malaysian3.jpg', label: 'Malaysian Concept - Raider 150 FI 3' },
-    { src: '/images/malaysian4.jpg', label: 'Malaysian Concept - Raider 150 FI 4' },
-    { src: '/images/malaysian5.jpg', label: 'Malaysian Concept - Raider 150 FI 5' },
+    { src: '/images/malaysian1.jpg', label: 'Raider Fi' },
+    { src: '/images/malaysian2.jpg', label: 'Sniper' },
+    { src: '/images/malaysian3.jpg', label: 'Click 125' },
+    { src: '/images/malaysian4.jpg', label: 'Wave' },
+    { src: '/images/malaysian5.jpg', label: 'Smash' },
   ],
   bigbike: [
-    { src: '/images/bigbike1.jpg', label: 'BigBike Concept - Raider 150 FI 1' },
-    { src: '/images/bigbike2.jpg', label: 'BigBike Concept - Raider 150 FI 2' },
-    { src: '/images/bigbike3.jpg', label: 'BigBike Concept - Raider 150 FI 3' },
-    { src: '/images/bigbike4.jpg', label: 'BigBike Concept - Raider 150 FI 4' },
-    { src: '/images/bigbike5.jpg', label: 'BigBike Concept - Raider 150 FI 5' },
+    { src: '/images/bigbike1.jpg', label: 'Raider 150 Fi' },
+    { src: '/images/bigbike2.jpg', label: 'Sniper' },
+    { src: '/images/bigbike3.jpg', label: 'Click 125' },
+    { src: '/images/bigbike4.jpg', label: 'Wave' },
+    { src: '/images/bigbike5.jpg', label: 'Smash' },
   ],
   vanz: [
-    { src: '/images/vanz1.jpg', label: 'Vanz Concept - Raider 150 FI 1' },
-    { src: '/images/vanz2.jpg', label: 'Vanz Concept - Raider 150 FI 2' },
-    { src: '/images/vanz3.jpg', label: 'Vanz Concept - Raider 150 FI 3' },
-    { src: '/images/vanz4.jpg', label: 'Vanz Concept - Raider 150 FI 4' },
-    { src: '/images/vanz5.jpg', label: 'Vanz Concept - Raider 150 FI 5' },
+    { src: '/images/vanz1.jpg', label: 'Raider 150 Fi' },
+    { src: '/images/vanz2.jpg', label: 'Sniper 155' },
+    { src: '/images/vanz3.jpg', label: 'Click' },
+    { src: '/images/vanz4.jpg', label: 'Wave' },
+    { src: '/images/vanz5.jpg', label: 'Smash' },
   ],
 };
 
@@ -188,7 +188,7 @@ export default function MotorshowApp() {
                         onChange={(e) => handleCommentChange(image.src, e.target.value)}
                       />
                       <Button onClick={() => submitComment(image.src)}>Submit</Button>
-                      <Button onClick={() => openCommentsModal(image.src)} className="view-comments-button">
+                      <Button onClick={() => openCommentsModal(image.label)} className="view-comments-button">
                         View Comments
                       </Button>
                     </div>

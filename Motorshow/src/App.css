@@ -248,7 +248,7 @@ body {
 }
 
 .comments-modal-content {
-  background: white;
+  background: rgb(60, 60, 60);
   padding: 20px;
   max-width: 600px;
   width: 100%;
